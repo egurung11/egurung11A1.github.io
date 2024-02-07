@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- https://www.w3schools.com/css/css_website_layout.asp -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UMKC Assignment</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+
+        /* Create three equal columns that floats next to each other */
+        .column {
+          float: left;
+          width: 50%;
+          padding: 15px;
+        }
+
+        /* Clear floats after the columns */
+        .row::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media screen and (max-width:600px) {
+          .column {
+            width: 100%;
+          }
+        }
+    </style>
+</head>
+<body>
+<h1><img src="Assignment%201%20Image%201.jpeg" alt="UMKC logo" width="50" height="50"
+         style="float:left;">
+    University of Missouri - Kansas City</h1>
+
+<a href="https://www.umkc.edu/about/index.html">About</a>
+
+<div class="row">
+    <div class="column">
+        <p>Welcome to the University of Missouri - Kansas City.
+        <br>This website is dedicated for: </p>
+        <ul>
+            <li>Students</li>
+            <ul>
+                <li>Full-time students</li>
+                <li>Park-time students</li>
+            </ul>
+            <li>Professors</li>
+        </ul>
+        <a href="https://www.umkc.edu/registrar/registration/index.html">
+            <img src="Assignment%201%20Image%202.jpeg" alt="Register here image" width="100" height="100">
+        </a>
+    </div>
+
+    <div class="column">
+        <iframe width="420" height="315"
+                src="https://www.youtube.com/embed/1rwc_O6geNU?si=noO5hQcaRaMFrdJu">
+        </iframe>
+    </div>
+</div>
+
+<p style="text-align:center">Figure 1: Homepage</p>
+
+<form action="/action_page.php">
+    <fieldset>
+        <legend>Log in information:</legend>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="text" id="password" name="password"><br><br>
+    </fieldset>
+</form>
+<form action="/action_page.php">
+    <fieldset>
+        <legend>Personal Information:</legend>
+        <label for="positions">Position:</label>
+        <select id="positions" name="positions">
+            <option value="student">Student</option>
+            <option value="professor">Professor</option>
+            <option value="janitor">Janitor</option>
+            <option value="chef">Chef</option>
+            <option value="police officer">Police Officer</option>
+        </select>
+
+        <p>Gender:</p>
+        <input type="radio" id="female" name="gender" value="HTML">
+        <label for="female">Female</label><br>
+        <input type="radio" id="male" name="gender" value="CSS">
+        <label for="male">Male</label><br>
+
+        <p>Contact preference:</p>
+        <input type="checkbox" id="email" name="email" value="email">
+        <label for="email"> E-Mail</label><br>
+        <input type="checkbox" id="phone" name="phone" value="phone">
+        <label for="phone"> Phone</label><br>
+        <br>
+        <label for="id">Picture:</label>
+        <input type="file" id="id" name="id" accept="image/png, image/jpeg" />
+        <br> <br>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+    </fieldset>
+    <br>
+    <input type="submit" value="Submit">
+</form>
+<p style="text-align:center">Figure 2: Registration Form</p>
+</body>
+</html>
